@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry - Hobbies</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#education">Education</a>
+    <a href="hobby.html" class="active">Hobbies</a>
+</nav>
+
+<div class="hero" id="top">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="https://assets.mixkit.co/videos/4394/4394-720.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay">
+        <h1 class="slide-up">My Hobbies</h1>
+        <p class="tagline slide-up delay-1">What I do when I'm not working on deadlines.</p>
+    </div>
+</div>
+
+<div class="section about-bg" id="agents" style="background-image: url('images/japan-garden-hd.jpg')">
+    <div class="wrap">
+        <h2>Building AI Agents</h2>
+        <div class="line"></div>
+        <p>One thing I really enjoy outside of coursework is building AI agents. I find it
+        fun to pick a random real-world problem and try to make an agent that can handle it on
+        its own &mdash; it's kind of like giving a robot a to-do list and seeing if it can figure
+        things out. Sometimes the agents work great. Sometimes they go completely off track
+        and do something hilarious. But that's what makes it interesting to me &mdash; debugging
+        agent behaviour feels like solving a puzzle.</p>
+
+        <p>Here are a few experiments I've enjoyed working on &mdash; click to see what happened:</p>
+
+        <div class="experiment-list">
+            <div class="lesson-card">
+                <input type="checkbox" id="exp-1" class="lesson-toggle">
+                <label for="exp-1" class="lesson-header">
+                    <span class="lesson-icon">&#128270;</span>
+                    <span>The Price Tracker That Never Sleeps</span>
+                    <span class="lesson-arrow">&darr;</span>
+                </label>
+                <div class="lesson-body">
+                    <p>I built a scraping agent that monitors competitor prices across e-commerce sites
+                    every few hours. The fun part was watching it handle sites that kept changing their
+                    HTML layout &mdash; I had to teach it to adapt on the fly using Playwright and
+                    BeautifulSoup. It now sends me a Telegram alert whenever a price drops by more than
+                    10%.</p>
+                </div>
+            </div>
+            <div class="lesson-card">
+                <input type="checkbox" id="exp-2" class="lesson-toggle">
+                <label for="exp-2" class="lesson-header">
+                    <span class="lesson-icon">&#129302;</span>
+                    <span>Three Agents, One Report</span>
+                    <span class="lesson-arrow">&darr;</span>
+                </label>
+                <div class="lesson-body">
+                    <p>I tried setting up a multi-agent pipeline where Agent A scrapes news articles,
+                    Agent B cleans and extracts key facts, and Agent C writes a summary report. The
+                    first few runs were a disaster &mdash; Agent C once wrote a report entirely about
+                    football because Agent B passed it the wrong data. Getting them to coordinate
+                    properly using LangGraph taught me a lot about error handling and pipeline design.</p>
+                </div>
+            </div>
+            <div class="lesson-card">
+                <input type="checkbox" id="exp-3" class="lesson-toggle">
+                <label for="exp-3" class="lesson-header">
+                    <span class="lesson-icon">&#9889;</span>
+                    <span>The "Do Everything" Automation</span>
+                    <span class="lesson-arrow">&darr;</span>
+                </label>
+                <div class="lesson-body">
+                    <p>I got really into n8n for a while and tried to automate my entire morning
+                    routine &mdash; pull overnight emails, summarise them with an LLM, check my calendar,
+                    and send me a daily briefing on Telegram before I even wake up. It mostly works,
+                    except the one time it summarised a spam email as "urgent business opportunity"
+                    and I almost replied to it.</p>
+                </div>
+            </div>
+            <div class="lesson-card">
+                <input type="checkbox" id="exp-4" class="lesson-toggle">
+                <label for="exp-4" class="lesson-header">
+                    <span class="lesson-icon">&#128218;</span>
+                    <span>Chatting With My Own Notes</span>
+                    <span class="lesson-arrow">&darr;</span>
+                </label>
+                <div class="lesson-body">
+                    <p>I built a RAG agent that indexes all my university lecture notes and lets me
+                    ask questions in plain English. Instead of searching through dozens of PDFs before
+                    an exam, I can just ask "What's the difference between LSTM and GRU?" and get an
+                    answer with the exact source. It's genuinely the most useful thing I've built for
+                    myself.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pill-list" style="margin-top: 20px;">
+            <span class="pill">Python</span>
+            <span class="pill">LangChain</span>
+            <span class="pill">LangGraph</span>
+            <span class="pill">n8n</span>
+            <span class="pill">OpenAI API</span>
+            <span class="pill">ChromaDB</span>
+            <span class="pill">BeautifulSoup</span>
+            <span class="pill">Selenium</span>
+        </div>
+    </div>
+</div>
+
+<div class="hobby-divider" style="background-image: url('images/japan-garden-hd.jpg')">
+    <div class="hobby-divider-overlay">
+        <span class="hobby-divider-icon">&darr;</span>
+        <p>From code to the world</p>
+    </div>
+</div>
+
+<div class="travel-banner" id="travel">
+    <img src="images/paris-eiffel-hd.jpg" alt="Eiffel Tower, Paris">
+    <div class="travel-banner-text">
+        <h2>Travelling</h2>
+        <p>Exploring the world, one city at a time.</p>
+    </div>
+</div>
+
+<div class="section section-dark about-bg" style="background-image: url('images/tower-bridge-hd.jpg')">
+    <div class="wrap">
+        <p>When I need a break from the screen, I like to travel. I've been lucky enough to
+        visit some amazing places across Asia and Europe. Whether it's walking along the Seine
+        in Paris, exploring temples in Japan, or just finding good street food in a random
+        alley, travelling gives me a fresh perspective. Honestly some of my best project ideas
+        come to me when I'm exploring somewhere new.</p>
+
+        <h3 class="dest-title">Europe</h3>
+        <div class="dest-grid">
+            <div class="dest-card">
+                <img src="images/paris-arc.png" alt="Arc de Triomphe, Paris">
+                <div class="dest-overlay">
+                    <span class="dest-label">Arc de Triomphe</span>
+                    <span class="dest-location">Paris, France</span>
+                </div>
+            </div>
+            <div class="dest-card">
+                <img src="images/paris-sculpture.png" alt="Arc de Triomphe sculpture">
+                <div class="dest-overlay">
+                    <span class="dest-label">Le Triomphe</span>
+                    <span class="dest-location">Paris, France</span>
+                </div>
+            </div>
+            <div class="dest-card">
+                <img src="images/paris-disney.png" alt="Disneyland Paris">
+                <div class="dest-overlay">
+                    <span class="dest-label">Disneyland</span>
+                    <span class="dest-location">Paris, France</span>
+                </div>
+            </div>
+            <div class="dest-card">
+                <img src="images/london-bridge.png" alt="Tower Bridge, London">
+                <div class="dest-overlay">
+                    <span class="dest-label">Tower Bridge</span>
+                    <span class="dest-location">London, UK</span>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="dest-title">Asia</h3>
+        <div class="dest-grid">
+            <div class="dest-card">
+                <img src="images/okinawa-ocean.png" alt="Okinawa coastline">
+                <div class="dest-overlay">
+                    <span class="dest-label">Cape Manzamo</span>
+                    <span class="dest-location">Okinawa, Japan</span>
+                </div>
+            </div>
+            <div class="dest-card">
+                <img src="images/japan-garden.png" alt="Japanese garden">
+                <div class="dest-overlay">
+                    <span class="dest-label">Traditional Garden</span>
+                    <span class="dest-location">Kobe, Japan</span>
+                </div>
+            </div>
+            <div class="dest-card">
+                <img src="images/japan-street.png" alt="Traditional Japanese village">
+                <div class="dest-overlay">
+                    <span class="dest-label">Ise Old Town</span>
+                    <span class="dest-location">Mie, Japan</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="travel-quote">
+            <p>"There's something special about being somewhere completely different from home &mdash;
+            it resets the way I think about problems and usually I come back with a bunch of
+            new ideas."</p>
+        </div>
+
+        <h3 class="dest-title">What Travel Taught Me</h3>
+        <div class="travel-lessons">
+            <div class="lesson-card">
+                <input type="checkbox" id="lesson-1" class="lesson-toggle">
+                <label for="lesson-1" class="lesson-header">
+                    <span class="lesson-icon">&#127758;</span>
+                    <span>Perspective Shift</span>
+                    <span class="lesson-arrow">&darr;</span>
+                </label>
+                <div class="lesson-body">
+                    <p>Seeing how different cultures solve everyday problems &mdash; from Tokyo's train system
+                    to London's public signage &mdash; changed how I approach UX and system design. Simple
+                    solutions that just work are always the hardest to build.</p>
+                </div>
+            </div>
+            <div class="lesson-card">
+                <input type="checkbox" id="lesson-2" class="lesson-toggle">
+                <label for="lesson-2" class="lesson-header">
+                    <span class="lesson-icon">&#128161;</span>
+                    <span>Creativity Under Constraints</span>
+                    <span class="lesson-arrow">&darr;</span>
+                </label>
+                <div class="lesson-body">
+                    <p>Navigating a city where I don't speak the language forced me to think creatively.
+                    That same resourcefulness carries into coding &mdash; when the obvious solution won't
+                    work, I've learned to look at the problem from a completely different angle.</p>
+                </div>
+            </div>
+            <div class="lesson-card">
+                <input type="checkbox" id="lesson-3" class="lesson-toggle">
+                <label for="lesson-3" class="lesson-header">
+                    <span class="lesson-icon">&#9749;</span>
+                    <span>Patience &amp; Debugging</span>
+                    <span class="lesson-arrow">&darr;</span>
+                </label>
+                <div class="lesson-body">
+                    <p>Getting lost in Osaka at midnight with a dead phone taught me patience like no
+                    production bug ever could. Travel and debugging share the same truth: stay calm,
+                    break the problem into smaller pieces, and keep moving forward.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="back-link">
+    <a href="index.html#projects">&#8592; See my projects</a>
+</div>
+
+<footer class="footer">
+    <p>Henry &copy; 2026</p>
+</footer>
+
+</body>
+</html>

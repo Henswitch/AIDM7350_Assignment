@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry - Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topnav">
+    <a href="#top" class="active">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="hobby.html">Hobbies</a>
+</nav>
+
+<div class="hero" id="top">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="https://assets.mixkit.co/videos/31534/31534-720.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay">
+        <img src="images/profile.png" alt="Henry" class="hero-photo slide-up">
+        <h1 class="slide-up">Henry</h1>
+        <p class="tagline slide-up delay-1">Making AI truly work for businesses &mdash; from idea to real workflow.</p>
+        <div class="hero-stats slide-up delay-2">
+            <span>4+ Years in Tech</span>
+            <span>AI Projects</span>
+            <span>3 Languages</span>
+            <span>AWS Certified</span>
+        </div>
+        <div class="scroll-hint slide-up delay-2">&darr;</div>
+    </div>
+</div>
+
+<div class="section about-bg" style="background-image: url('images/okinawa-ocean-hd.jpg')">
+    <div class="wrap">
+        <p class="about-hint">Click a bubble to learn more</p>
+
+        <input type="radio" name="about-tab" id="tab-who" checked class="about-radio">
+        <input type="radio" name="about-tab" id="tab-journey" class="about-radio">
+        <input type="radio" name="about-tab" id="tab-now" class="about-radio">
+        <input type="radio" name="about-tab" id="tab-travel" class="about-radio">
+
+        <div class="about-bubbles">
+            <label for="tab-who" class="about-bubble">Who I Am</label>
+            <label for="tab-journey" class="about-bubble">My Journey</label>
+            <label for="tab-now" class="about-bubble">What I Do</label>
+            <label for="tab-travel" class="about-bubble">Beyond the Screen</label>
+        </div>
+
+        <div class="about-panels">
+            <div class="about-panel" id="panel-who">
+                <p>Hey, I'm Henry, a Hong Kong local fluent in English, Cantonese, and
+                Mandarin. I'm currently pursuing my M.Sc. in AI and Digital Media at Hong
+                Kong Baptist University, where I channel my passion for problem-solving into
+                real-world tech challenges &mdash; like dissecting APIs, automating workflows,
+                and even building AI tools for trip planning.</p>
+            </div>
+            <div class="about-panel" id="panel-journey">
+                <p>I started my career in digital marketing, spending several years
+                working on campaigns, data analytics, and content strategy. But somewhere
+                along the way, I realised the part I enjoyed most wasn't the marketing
+                itself &mdash; it was the data, the automation, and the tools behind it.</p>
+                <p>That curiosity turned into a real passion. I decided to make the switch
+                and committed to studying tech seriously. I taught myself Python, started
+                building data pipelines and chatbots, and eventually moved into roles where
+                I was developing automation tools, API integrations, and LLM-based systems
+                for real businesses. It wasn't an easy transition, but it felt right.</p>
+            </div>
+            <div class="about-panel" id="panel-now">
+                <p>Today, I focus on making AI actually work inside businesses &mdash; not just
+                prototypes that look good in a demo, but real tools that fit into existing
+                workflows. I have hands-on experience with multi-source data acquisition,
+                API orchestration, RAG pipelines, and deploying at scale on the cloud.</p>
+            </div>
+            <div class="about-panel" id="panel-travel">
+                <p>Travelling is one of the things that keeps me going. I love getting
+                lost in a new city, trying food I can't pronounce, and just soaking in how
+                different life looks somewhere else. I've explored Paris, London, Okinawa,
+                and cities all across Japan &mdash; each trip gives me a fresh perspective
+                and honestly, some of my best project ideas have hit me while wandering
+                around a place I've never been before.</p>
+            </div>
+        </div>
+
+        <div class="quick-links">
+            <a href="#projects" class="quick-link">
+                <span class="quick-icon">&#128736;</span>
+                <span class="quick-title">See My Projects</span>
+            </a>
+            <a href="#skills" class="quick-link">
+                <span class="quick-icon">&#9889;</span>
+                <span class="quick-title">Technical Skills</span>
+            </a>
+            <a href="#education" class="quick-link">
+                <span class="quick-icon">&#127891;</span>
+                <span class="quick-title">Education &amp; Certs</span>
+            </a>
+            <a href="hobby.html" class="quick-link">
+                <span class="quick-icon">&#127759;</span>
+                <span class="quick-title">Hobbies &amp; Travel</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="parallax" style="background-image: url('images/okinawa-ocean-hd.jpg')"></div>
+
+<div class="section" id="projects">
+    <div class="wrap">
+        <h2>Projects</h2>
+        <div class="line"></div>
+        <p style="text-align: center; margin-bottom: 20px; color: #94a3b8;">Building AI agents isn't just what I study &mdash; it's what I genuinely enjoy doing.
+        I like picking apart messy real-world problems, figuring out how to automate them, and
+        shipping tools that people can actually use. Here are some projects where I've done exactly that.</p>
+
+        <input type="radio" name="proj" id="proj-1" class="slide-radio">
+        <input type="radio" name="proj" id="proj-2" class="slide-radio">
+        <input type="radio" name="proj" id="proj-3" class="slide-radio">
+        <input type="radio" name="proj" id="proj-4" class="slide-radio">
+        <input type="radio" name="proj" id="proj-5" class="slide-radio">
+
+        <div class="slider-wrap">
+            <div class="slider-track">
+
+                <div class="slide">
+                    <div class="slide-inner">
+                        <img src="images/project-exam.png" class="slide-img" alt="Exam Analyzer">
+                        <div class="slide-text">
+                            <span class="proj-category cat-agent">AI Agent &middot; EdTech</span>
+                            <h3>AI-Powered Exam Analyzer</h3>
+                            <input type="radio" name="exam-part" id="exam-p1" class="part-radio">
+                            <input type="radio" name="exam-part" id="exam-p2" class="part-radio">
+                            <input type="radio" name="exam-part" id="exam-p3" class="part-radio">
+                            <div class="part-tabs">
+                                <label for="exam-p1" class="part-tab">Pain Point</label>
+                                <label for="exam-p2" class="part-tab">The Solution</label>
+                                <label for="exam-p3" class="part-tab">Tech Stack</label>
+                            </div>
+                            <div class="part-wrap">
+                                <div class="part-track">
+                                    <div class="part-slide"><p>A government education client needed to grade thousands of handwritten exam papers faster and more consistently. Teachers were spending hours on manual marking with no way to track student weaknesses or auto-generate targeted revision material.</p></div>
+                                    <div class="part-slide"><p>Built a multi-agent pipeline using Llama 3.2 Vision for OCR on handwritten answers and NVIDIA Nemotron for reasoning-based rubric evaluation. Designed a RAG retrieval layer with ChromaDB and LangChain to power a question generator that uses K-means clustering (scikit-learn) to identify weak topics and produce personalised remedial papers automatically via a Streamlit dashboard.</p></div>
+                                    <div class="part-slide"><div class="pill-list"><span class="pill">Python</span><span class="pill">Nemotron</span><span class="pill">Llama 3.2 Vision</span><span class="pill">LangChain</span><span class="pill">ChromaDB</span><span class="pill">scikit-learn</span><span class="pill">Streamlit</span></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-inner">
+                        <img src="images/project-ads.png" class="slide-img" alt="Ad Platform">
+                        <div class="slide-text">
+                            <span class="proj-category cat-data">RAG Chatbot &middot; MarTech</span>
+                            <h3>Ad Intelligence Platform</h3>
+                            <input type="radio" name="ads-part" id="ads-p1" class="part-radio">
+                            <input type="radio" name="ads-part" id="ads-p2" class="part-radio">
+                            <input type="radio" name="ads-part" id="ads-p3" class="part-radio">
+                            <div class="part-tabs">
+                                <label for="ads-p1" class="part-tab">Pain Point</label>
+                                <label for="ads-p2" class="part-tab">The Solution</label>
+                                <label for="ads-p3" class="part-tab">Tech Stack</label>
+                            </div>
+                            <div class="part-wrap">
+                                <div class="part-track">
+                                    <div class="part-slide"><p>A digital marketing team was spending hours manually pulling campaign reports from Meta Ads Manager. They had no quick way to check performance, compare week-over-week metrics, or get alerted when a campaign started underperforming.</p></div>
+                                    <div class="part-slide"><p>Built a Flask-based chatbot powered by Llama 3.1 that lets marketers query ad data in plain English. APScheduler fetches from Meta's Graph API on a recurring schedule, ChromaDB stores and indexes the data, and NVIDIA Reranker sharpens retrieval accuracy. Integrated n8n for workflow orchestration and a Telegram bot via python-telegram-bot for real-time alerts when KPIs cross thresholds.</p></div>
+                                    <div class="part-slide"><div class="pill-list"><span class="pill">Python</span><span class="pill">Flask</span><span class="pill">Llama 3.1</span><span class="pill">ChromaDB</span><span class="pill">APScheduler</span><span class="pill">Meta Graph API</span><span class="pill">n8n</span><span class="pill">Telegram Bot</span><span class="pill">NVIDIA Reranker</span></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-inner">
+                        <img src="images/project-travel.png" class="slide-img" alt="Travel Planner">
+                        <div class="slide-text">
+                            <span class="proj-category cat-app">AI Agent &middot; Travel</span>
+                            <h3>AI Travel Planner</h3>
+                            <input type="radio" name="travel-part" id="travel-p1" class="part-radio">
+                            <input type="radio" name="travel-part" id="travel-p2" class="part-radio">
+                            <input type="radio" name="travel-part" id="travel-p3" class="part-radio">
+                            <div class="part-tabs">
+                                <label for="travel-p1" class="part-tab">Pain Point</label>
+                                <label for="travel-p2" class="part-tab">The Solution</label>
+                                <label for="travel-p3" class="part-tab">Tech Stack</label>
+                            </div>
+                            <div class="part-wrap">
+                                <div class="part-track">
+                                    <div class="part-slide"><p>Travellers planning multi-city trips had to juggle transport schedules, weather forecasts, cultural events, and personal preferences across dozens of tabs &mdash; an overwhelming and error-prone process with no unified tool to bring it all together.</p></div>
+                                    <div class="part-slide"><p>Built a Streamlit-based AI planner with a LangChain ReAct agent and OpenAI GPT-4o that auto-pulls real-time data from Google Maps API, OpenWeatherMap, and Skyscanner. BeautifulSoup scrapes local blogs for hidden tips. A ChromaDB-backed RAG workflow stores user preferences and refines itineraries through multi-turn chat. Born from my own love of travel.</p></div>
+                                    <div class="part-slide"><div class="pill-list"><span class="pill">Python</span><span class="pill">LangChain ReAct</span><span class="pill">GPT-4o</span><span class="pill">Google Maps API</span><span class="pill">OpenWeatherMap</span><span class="pill">ChromaDB</span><span class="pill">Streamlit</span><span class="pill">BeautifulSoup</span></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-inner">
+                        <img src="images/project-market.png" class="slide-img" alt="Market Engine">
+                        <div class="slide-text">
+                            <span class="proj-category cat-pipeline">Data Pipeline &middot; Analytics</span>
+                            <h3>Market Intelligence Engine</h3>
+                            <input type="radio" name="market-part" id="market-p1" class="part-radio">
+                            <input type="radio" name="market-part" id="market-p2" class="part-radio">
+                            <input type="radio" name="market-part" id="market-p3" class="part-radio">
+                            <div class="part-tabs">
+                                <label for="market-p1" class="part-tab">Pain Point</label>
+                                <label for="market-p2" class="part-tab">The Solution</label>
+                                <label for="market-p3" class="part-tab">Tech Stack</label>
+                            </div>
+                            <div class="part-wrap">
+                                <div class="part-track">
+                                    <div class="part-slide"><p>A product team needed to track fast-moving consumer trends across social media, forums, and news &mdash; but manually monitoring dozens of sources produced unstructured noise that was impossible to act on in time.</p></div>
+                                    <div class="part-slide"><p>Built a parallel monitoring engine using Python asyncio and ThreadPool to fetch from 7 sources including Reddit (PRAW), Google Trends (pytrends), and news RSS feeds. An LLM-based NER pipeline (spaCy + GPT-4o) extracts entities, FAISS handles semantic deduplication via cosine similarity, and a custom TF-IDF ranking algorithm surfaces actionable insights into a Streamlit dashboard with scheduled Slack/email digests.</p></div>
+                                    <div class="part-slide"><div class="pill-list"><span class="pill">Python</span><span class="pill">asyncio</span><span class="pill">PRAW (Reddit)</span><span class="pill">pytrends</span><span class="pill">spaCy</span><span class="pill">GPT-4o</span><span class="pill">FAISS</span><span class="pill">Streamlit</span><span class="pill">Slack API</span></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-inner">
+                        <img src="images/project-handwriting.png" class="slide-img" alt="Handwriting Analyzer">
+                        <div class="slide-text">
+                            <span class="proj-category cat-agent">AI Agent &middot; EdTech</span>
+                            <h3>Chinese Handwriting Analyzer</h3>
+                            <input type="radio" name="hw-part" id="hw-p1" class="part-radio">
+                            <input type="radio" name="hw-part" id="hw-p2" class="part-radio">
+                            <input type="radio" name="hw-part" id="hw-p3" class="part-radio">
+                            <div class="part-tabs">
+                                <label for="hw-p1" class="part-tab">Pain Point</label>
+                                <label for="hw-p2" class="part-tab">The Solution</label>
+                                <label for="hw-p3" class="part-tab">Tech Stack</label>
+                            </div>
+                            <div class="part-wrap">
+                                <div class="part-track">
+                                    <div class="part-slide"><p>Teachers grading Traditional Chinese handwritten compositions spend hours identifying character errors manually. Existing OCR tools struggle with shape-similar characters (e.g. &#26410;/&#26411;, &#24049;/&#24050;/&#24051;) and provide inconsistent results across runs &mdash; making them unreliable for formal grading.</p></div>
+                                    <div class="part-slide"><p>Built an end-to-end pipeline using PaddleOCR v5 with OpenCV preprocessing for layout detection and character recognition (93.29% accuracy). Fine-tuned a ResNet34 CNN with Center Loss on 79,760 synthetic images as a second-pass visual verifier for shape-similar characters (81.6% accuracy). Integrated GPT-4.1 API for context-aware spelling correction with batched validation, cutting API calls by 80% and RAM from ~553 MB to ~192 MB. Deterministic grading via temperature=0 ensures reproducible results. Generates PDF reports with teacher feedback.</p></div>
+                                    <div class="part-slide"><div class="pill-list"><span class="pill">Python</span><span class="pill">PaddleOCR v5</span><span class="pill">PyTorch</span><span class="pill">ResNet34</span><span class="pill">OpenCV</span><span class="pill">GPT-4.1</span><span class="pill">Streamlit</span><span class="pill">FastAPI</span><span class="pill">ReportLab</span></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="slider-dots">
+            <label for="proj-1" class="dot"></label>
+            <label for="proj-2" class="dot"></label>
+            <label for="proj-3" class="dot"></label>
+            <label for="proj-4" class="dot"></label>
+            <label for="proj-5" class="dot"></label>
+        </div>
+    </div>
+</div>
+
+<div class="marquee">
+    <div class="marquee-track">
+        <span>AI Automation</span><span>&middot;</span>
+        <span>LangChain</span><span>&middot;</span>
+        <span>Data Pipelines</span><span>&middot;</span>
+        <span>RAG Systems</span><span>&middot;</span>
+        <span>Python</span><span>&middot;</span>
+        <span>Enterprise Solutions</span><span>&middot;</span>
+        <span>Cloud Architecture</span><span>&middot;</span>
+        <span>AI Automation</span><span>&middot;</span>
+        <span>LangChain</span><span>&middot;</span>
+        <span>Data Pipelines</span><span>&middot;</span>
+        <span>RAG Systems</span><span>&middot;</span>
+        <span>Python</span><span>&middot;</span>
+        <span>Enterprise Solutions</span><span>&middot;</span>
+        <span>Cloud Architecture</span><span>&middot;</span>
+    </div>
+</div>
+
+<div class="parallax" style="background-image: url('images/japan-garden-hd.jpg')"></div>
+
+<div class="section section-dark" id="skills">
+    <div class="wrap">
+        <h2>Technical Skills</h2>
+        <div class="line"></div>
+        <div class="skill-group">
+            <h3>Programming & AI</h3>
+            <span class="pill green">Python</span>
+            <span class="pill green">LangChain</span>
+            <span class="pill green">RAG</span>
+            <span class="pill green">PyTorch</span>
+            <span class="pill green">TensorFlow</span>
+        </div>
+        <div class="skill-group">
+            <h3>Data & Analytics</h3>
+            <span class="pill blue">SQL</span>
+            <span class="pill blue">MongoDB</span>
+            <span class="pill blue">Tableau</span>
+            <span class="pill blue">Power BI</span>
+        </div>
+        <div class="skill-group">
+            <h3>Web & Scraping</h3>
+            <span class="pill amber">HTML</span>
+            <span class="pill amber">CSS</span>
+            <span class="pill amber">JavaScript</span>
+            <span class="pill amber">BeautifulSoup</span>
+            <span class="pill amber">Selenium</span>
+            <span class="pill amber">Scrapy</span>
+        </div>
+        <div class="skill-group">
+            <h3>Cloud & Creative</h3>
+            <span class="pill purple">AWS</span>
+            <span class="pill purple">n8n</span>
+            <span class="pill purple">Flask</span>
+            <span class="pill purple">Illustrator</span>
+            <span class="pill purple">Photoshop</span>
+            <span class="pill purple">Premiere Pro</span>
+        </div>
+    </div>
+</div>
+
+<div class="parallax" style="background-image: url('images/tower-bridge-hd.jpg')"></div>
+
+<div class="section" id="education">
+    <div class="wrap">
+        <h2>Education</h2>
+        <div class="line"></div>
+        <div class="timeline-item">
+            <h3>M.Sc. in AI and Digital Media</h3>
+            <p class="time">Hong Kong Baptist University &middot; 2024 - Present</p>
+            <p>Studying machine learning, deep learning, fine-tuning models, generative AI
+            applications including RAG, AI agent design and pipeline development.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Bachelor of Journalism and Communication</h3>
+            <p class="time">The Hang Seng University of Hong Kong &middot; 2018 - 2020</p>
+            <p>Developed skills in strategic communication and digital content creation. This
+            background helps a lot with explaining complex systems to non-technical people.</p>
+        </div>
+    </div>
+</div>
+
+<div class="section section-dark">
+    <div class="wrap">
+        <h2>Certifications</h2>
+        <div class="line"></div>
+        <div style="text-align: center">
+            <div class="cert-card">
+                <h3>AWS Certified Cloud Practitioner</h3>
+                <p>CLF-C02 &middot; Amazon Web Services</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="wrap">
+        <h2>Languages</h2>
+        <div class="line"></div>
+        <div class="lang-row">
+            <div class="lang-item">
+                <h3>English</h3>
+                <p>Business Fluent</p>
+            </div>
+            <div class="lang-item">
+                <h3>Cantonese</h3>
+                <p>Native</p>
+            </div>
+            <div class="lang-item">
+                <h3>Mandarin</h3>
+                <p>Native</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact-section">
+    <div class="contact-inner">
+        <h2>Let's Work Together</h2>
+        <div class="line"></div>
+        <p>I'm always looking for opportunities to contribute &mdash; whether it's a research
+        project, a collaboration, or anything that needs someone who can build AI pipelines
+        and automation systems from scratch.</p>
+        <p>Dr. Lan, if any of my projects catch your eye or if you have upcoming work
+        where an extra pair of hands could help, I'd be really keen to discuss it.</p>
+        <p class="thanks-note">P.S. If you've scrolled all the way down here &mdash; thank you, that genuinely means a lot.</p>
+        <a href="mailto:24491829@life.hkbu.edu.hk" class="cta-btn">Get In Touch</a>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>Henry &copy; 2026</p>
+</footer>
+
+</body>
+</html>
