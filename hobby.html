@@ -32,87 +32,64 @@
         <h2>Building AI Agents</h2>
         <div class="line"></div>
         <p>One thing I really enjoy outside of coursework is building AI agents. I find it
-        fun to pick a random real-world problem and try to make an agent that can handle it on
+        fun to pick a real-world problem and try to make an agent that can handle it on
         its own &mdash; it's kind of like giving a robot a to-do list and seeing if it can figure
-        things out. Sometimes the agents work great. Sometimes they go completely off track
-        and do something hilarious. But that's what makes it interesting to me &mdash; debugging
-        agent behaviour feels like solving a puzzle.</p>
+        things out. Sometimes they work perfectly. Sometimes they go completely off track.
+        But that's what makes it interesting &mdash; debugging agent behaviour feels like
+        solving a puzzle.</p>
 
-        <p>Here are a few experiments I've enjoyed working on &mdash; click to see what happened:</p>
+        <p>Most of my experiments start the same way: I spot something repetitive in my
+        daily routine and think "can I get an agent to do this for me?" From there I'll
+        wire up some APIs, add an LLM for reasoning, and see what happens. The tools I
+        reach for most often are:</p>
 
-        <div class="experiment-list">
-            <div class="lesson-card">
-                <input type="checkbox" id="exp-1" class="lesson-toggle">
-                <label for="exp-1" class="lesson-header">
-                    <span class="lesson-icon">&#128270;</span>
-                    <span>The Price Tracker That Never Sleeps</span>
-                    <span class="lesson-arrow">&darr;</span>
-                </label>
-                <div class="lesson-body">
-                    <p>I built a scraping agent that monitors competitor prices across e-commerce sites
-                    every few hours. The fun part was watching it handle sites that kept changing their
-                    HTML layout &mdash; I had to teach it to adapt on the fly using Playwright and
-                    BeautifulSoup. It now sends me a Telegram alert whenever a price drops by more than
-                    10%.</p>
-                </div>
+        <div class="tool-grid">
+            <div class="tool-card">
+                <span class="tool-icon">&#128279;</span>
+                <h3>LangChain &amp; LangGraph</h3>
+                <p>I mostly use LangChain's LCEL syntax to build ReAct agents with custom
+                tool-calling. For multi-step workflows I've moved to LangGraph &mdash; defining
+                nodes as functions, edges as conditions, and letting the graph decide which
+                tool to call next based on the LLM's output. I've also spent a lot of time
+                tuning prompt templates and output parsers to reduce hallucination in
+                structured responses, especially when the agent needs to return valid JSON
+                for downstream processing.</p>
             </div>
-            <div class="lesson-card">
-                <input type="checkbox" id="exp-2" class="lesson-toggle">
-                <label for="exp-2" class="lesson-header">
-                    <span class="lesson-icon">&#129302;</span>
-                    <span>Three Agents, One Report</span>
-                    <span class="lesson-arrow">&darr;</span>
-                </label>
-                <div class="lesson-body">
-                    <p>I tried setting up a multi-agent pipeline where Agent A scrapes news articles,
-                    Agent B cleans and extracts key facts, and Agent C writes a summary report. The
-                    first few runs were a disaster &mdash; Agent C once wrote a report entirely about
-                    football because Agent B passed it the wrong data. Getting them to coordinate
-                    properly using LangGraph taught me a lot about error handling and pipeline design.</p>
-                </div>
+            <div class="tool-card">
+                <span class="tool-icon">&#9881;</span>
+                <h3>n8n &amp; Workflow Orchestration</h3>
+                <p>I use n8n when I need to connect external services without writing glue
+                code &mdash; things like pulling data from a REST API on a cron schedule, running
+                it through a webhook, and pushing results to Slack or Telegram. Where it
+                gets interesting is combining n8n triggers with Python scripts for heavier
+                logic &mdash; like calling an LLM endpoint for summarisation before the final
+                output step.</p>
             </div>
-            <div class="lesson-card">
-                <input type="checkbox" id="exp-3" class="lesson-toggle">
-                <label for="exp-3" class="lesson-header">
-                    <span class="lesson-icon">&#9889;</span>
-                    <span>The "Do Everything" Automation</span>
-                    <span class="lesson-arrow">&darr;</span>
-                </label>
-                <div class="lesson-body">
-                    <p>I got really into n8n for a while and tried to automate my entire morning
-                    routine &mdash; pull overnight emails, summarise them with an LLM, check my calendar,
-                    and send me a daily briefing on Telegram before I even wake up. It mostly works,
-                    except the one time it summarised a spam email as "urgent business opportunity"
-                    and I almost replied to it.</p>
-                </div>
+            <div class="tool-card">
+                <span class="tool-icon">&#128451;</span>
+                <h3>RAG &amp; Vector Databases</h3>
+                <p>I've worked with both ChromaDB and FAISS for embedding storage. The real
+                challenge isn't just indexing documents &mdash; it's chunking strategy (recursive
+                vs. semantic splitting), picking the right embedding model (I usually compare
+                OpenAI's ada-002 against open-source alternatives), and handling retrieval
+                quality with metadata filters or NVIDIA Reranker as a second pass when top-k
+                results aren't precise enough.</p>
             </div>
-            <div class="lesson-card">
-                <input type="checkbox" id="exp-4" class="lesson-toggle">
-                <label for="exp-4" class="lesson-header">
-                    <span class="lesson-icon">&#128218;</span>
-                    <span>Chatting With My Own Notes</span>
-                    <span class="lesson-arrow">&darr;</span>
-                </label>
-                <div class="lesson-body">
-                    <p>I built a RAG agent that indexes all my university lecture notes and lets me
-                    ask questions in plain English. Instead of searching through dozens of PDFs before
-                    an exam, I can just ask "What's the difference between LSTM and GRU?" and get an
-                    answer with the exact source. It's genuinely the most useful thing I've built for
-                    myself.</p>
-                </div>
+            <div class="tool-card">
+                <span class="tool-icon">&#127760;</span>
+                <h3>Web Scraping &amp; Data Acquisition</h3>
+                <p>I use BeautifulSoup with requests for static pages, and Playwright or
+                Selenium for JavaScript-rendered content that needs interaction. For larger
+                jobs I've used Scrapy with custom middlewares for rotation and rate limiting.
+                The trickiest part is always handling anti-bot patterns &mdash; dynamic class
+                names, lazy-loaded content, and CAPTCHAs that break your pipeline at 2 AM.</p>
             </div>
         </div>
 
-        <div class="pill-list" style="margin-top: 20px;">
-            <span class="pill">Python</span>
-            <span class="pill">LangChain</span>
-            <span class="pill">LangGraph</span>
-            <span class="pill">n8n</span>
-            <span class="pill">OpenAI API</span>
-            <span class="pill">ChromaDB</span>
-            <span class="pill">BeautifulSoup</span>
-            <span class="pill">Selenium</span>
-        </div>
+        <p>What I enjoy most about building agents is that every failure teaches you
+        something new about how LLMs think, how tools break, and how to design
+        systems that can recover gracefully. It's the closest thing to teaching a
+        machine common sense.</p>
     </div>
 </div>
 
@@ -146,6 +123,9 @@
                 <div class="dest-overlay">
                     <span class="dest-label">Arc de Triomphe</span>
                     <span class="dest-location">Paris, France</span>
+                    <span class="dest-info">Standing at the top and looking down the
+                    Champs-&Eacute;lys&eacute;es at sunset was one of those moments
+                    I'll never forget.</span>
                 </div>
             </div>
             <div class="dest-card">
@@ -153,6 +133,8 @@
                 <div class="dest-overlay">
                     <span class="dest-label">Le Triomphe</span>
                     <span class="dest-location">Paris, France</span>
+                    <span class="dest-info">The level of detail carved into this sculpture
+                    is insane &mdash; every figure tells part of a story about French history.</span>
                 </div>
             </div>
             <div class="dest-card">
@@ -160,6 +142,8 @@
                 <div class="dest-overlay">
                     <span class="dest-label">Disneyland</span>
                     <span class="dest-location">Paris, France</span>
+                    <span class="dest-info">Yes, I'm an adult who loves Disneyland. The
+                    parade at night with all the lights was absolutely magical.</span>
                 </div>
             </div>
             <div class="dest-card">
@@ -167,6 +151,8 @@
                 <div class="dest-overlay">
                     <span class="dest-label">Tower Bridge</span>
                     <span class="dest-location">London, UK</span>
+                    <span class="dest-info">Walked across this bridge at dawn with barely
+                    anyone around. London in the early morning hits different.</span>
                 </div>
             </div>
         </div>
@@ -178,6 +164,8 @@
                 <div class="dest-overlay">
                     <span class="dest-label">Cape Manzamo</span>
                     <span class="dest-location">Okinawa, Japan</span>
+                    <span class="dest-info">The water here is unbelievably clear. I spent
+                    an entire afternoon just sitting on the cliff watching the waves.</span>
                 </div>
             </div>
             <div class="dest-card">
@@ -185,6 +173,8 @@
                 <div class="dest-overlay">
                     <span class="dest-label">Traditional Garden</span>
                     <span class="dest-location">Kobe, Japan</span>
+                    <span class="dest-info">There's a quietness to Japanese gardens that
+                    forces you to slow down. Best place to think clearly.</span>
                 </div>
             </div>
             <div class="dest-card">
@@ -192,6 +182,8 @@
                 <div class="dest-overlay">
                     <span class="dest-label">Ise Old Town</span>
                     <span class="dest-location">Mie, Japan</span>
+                    <span class="dest-info">Walking through streets that haven't changed in
+                    centuries. The mochi here was the best I've ever had.</span>
                 </div>
             </div>
         </div>
