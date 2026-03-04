@@ -1,4 +1,4 @@
-
+/* dark theme portfolio */
 html {
     scroll-behavior: smooth;
 }
@@ -29,7 +29,7 @@ a {
     100% { background-position: 0% 50%; }
 }
 
-
+/* sticky nav */
 .topnav {
     position: sticky;
     top: 0;
@@ -901,11 +901,45 @@ input[id$="-p3"]:checked ~ .part-wrap .part-track { animation: none; transform: 
     color: #64748b;
 }
 
-.experiment-list {
+.tool-grid {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 16px;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 18px 0;
+}
+
+.tool-card {
+    flex: 1 1 45%;
+    background: rgba(15,23,42,0.9);
+    border-radius: 10px;
+    padding: 18px 20px;
+    border: 1px solid #334155;
+    transition: 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(99,102,241,0.15);
+    border-color: #6366f1;
+}
+
+.tool-icon {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.tool-card h3 {
+    color: #a5b4fc;
+    font-size: 15px;
+    margin: 0 0 6px;
+}
+
+.tool-card p {
+    font-size: 13px;
+    color: #94a3b8;
+    line-height: 1.65;
+    margin: 0;
 }
 
 .lesson-toggle {
@@ -1052,6 +1086,15 @@ input[id$="-p3"]:checked ~ .part-wrap .part-track { animation: none; transform: 
     overflow: hidden;
     border-radius: 10px;
     vertical-align: top;
+    transition: transform 0.4s, box-shadow 0.4s, z-index 0s;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.dest-card:hover {
+    transform: scale(1.35);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    z-index: 10;
 }
 
 .dest-card img {
@@ -1063,8 +1106,8 @@ input[id$="-p3"]:checked ~ .part-wrap .part-track { animation: none; transform: 
 }
 
 .dest-card:hover img {
-    transform: scale(1.08);
-    filter: brightness(0.65);
+    height: 260px;
+    filter: brightness(0.55);
 }
 
 .dest-overlay {
@@ -1072,8 +1115,8 @@ input[id$="-p3"]:checked ~ .part-wrap .part-track { animation: none; transform: 
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 35px 14px 14px 14px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.75));
+    padding: 40px 14px 14px 14px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
     opacity: 0;
     transition: 0.4s;
 }
@@ -1094,6 +1137,15 @@ input[id$="-p3"]:checked ~ .part-wrap .part-track { animation: none; transform: 
     color: #fbbf24;
     font-size: 12px;
     margin-top: 2px;
+}
+
+.dest-info {
+    display: block;
+    color: rgba(255,255,255,0.85);
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: 6px;
+    font-style: italic;
 }
 
 .travel-quote {
@@ -1180,8 +1232,11 @@ input[id$="-p3"]:checked ~ .part-wrap .part-track { animation: none; transform: 
     .parallax { height: 140px; background-attachment: scroll; }
 
     .dest-card { width: 90%; margin: 6px auto; display: block; }
+    .dest-card:hover { transform: scale(1.05); }
     .dest-grid { text-align: center; }
     .travel-banner { height: 200px; }
+    .tool-grid { flex-direction: column; }
+    .tool-card { flex: 1 1 100%; }
 }
 
 @media (max-width: 480px) {
